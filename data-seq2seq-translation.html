@@ -170,8 +170,7 @@ transformers: 4.16.2
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
+<div class="output_html rendered_html output_subarea output_execute_result"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -206,8 +205,7 @@ transformers: 4.16.2
     </tr>
   </tbody>
 </table>
-</div>
-</div>
+</div></div>
 
 </div>
 
@@ -386,8 +384,7 @@ transformers: 4.16.2
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea ">
-<table border="1" class="dataframe">
+<div class="output_html rendered_html output_subarea "><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -407,8 +404,7 @@ transformers: 4.16.2
       <td>It is certainly not my task to judge other people' s alliances but if the People' s Party and the Liberals are so desperate to cement their alliance, let them at least propose something positive, something that has a chance of working, not repeat th</td>
     </tr>
   </tbody>
-</table>
-</div>
+</table></div>
 
 </div>
 
@@ -531,7 +527,7 @@ transformers: 4.16.2
 <span class="k">for</span> <span class="n">model_name</span> <span class="ow">in</span> <span class="n">pretrained_model_names</span><span class="p">:</span>
     <span class="n">error</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;=== </span><span class="si">{model_name}</span><span class="s2"> ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;=== </span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2"> ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
     <span class="n">hf_tok_kwargs</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">if</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s2">&quot;sshleifer/tiny-mbart&quot;</span><span class="p">:</span>
@@ -539,7 +535,7 @@ transformers: 4.16.2
 
     <span class="n">hf_arch</span><span class="p">,</span> <span class="n">hf_config</span><span class="p">,</span> <span class="n">hf_tokenizer</span><span class="p">,</span> <span class="n">hf_model</span> <span class="o">=</span> <span class="n">BLURR</span><span class="o">.</span><span class="n">get_hf_objects</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">model_cls</span><span class="o">=</span><span class="n">model_cls</span><span class="p">,</span> <span class="n">tokenizer_kwargs</span><span class="o">=</span><span class="n">hf_tok_kwargs</span><span class="p">)</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;architecture:</span><span class="se">\t</span><span class="si">{hf_arch}</span><span class="se">\n</span><span class="s2">tokenizer:</span><span class="se">\t</span><span class="s2">{type(hf_tokenizer).__name__}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;architecture:</span><span class="se">\t</span><span class="si">{</span><span class="n">hf_arch</span><span class="si">}</span><span class="se">\n</span><span class="s2">tokenizer:</span><span class="se">\t</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">hf_tokenizer</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
     <span class="c1"># not all architectures include a native pad_token (e.g., gpt2, ctrl, etc...), so we add one here</span>
     <span class="k">if</span> <span class="n">hf_tokenizer</span><span class="o">.</span><span class="n">pad_token</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -552,7 +548,7 @@ transformers: 4.16.2
     <span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">add_t5_prefix</span><span class="p">(</span><span class="n">inp</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;translate German to English: </span><span class="si">{inp}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="p">(</span><span class="n">hf_arch</span> <span class="o">==</span> <span class="s2">&quot;t5&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">inp</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;translate German to English: </span><span class="si">{</span><span class="n">inp</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="p">(</span><span class="n">hf_arch</span> <span class="o">==</span> <span class="s2">&quot;t5&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">inp</span>
 
     <span class="n">blocks</span> <span class="o">=</span> <span class="p">(</span><span class="n">Seq2SeqTextBlock</span><span class="p">(</span><span class="n">batch_tokenize_tfm</span><span class="o">=</span><span class="n">batch_tokenize_tfm</span><span class="p">),</span> <span class="n">noop</span><span class="p">)</span>
     <span class="n">dblock</span> <span class="o">=</span> <span class="n">DataBlock</span><span class="p">(</span><span class="n">blocks</span><span class="o">=</span><span class="n">blocks</span><span class="p">,</span> <span class="n">get_x</span><span class="o">=</span><span class="n">Pipeline</span><span class="p">([</span><span class="n">ColReader</span><span class="p">(</span><span class="s2">&quot;de&quot;</span><span class="p">),</span> <span class="n">add_t5_prefix</span><span class="p">]),</span> <span class="n">get_y</span><span class="o">=</span><span class="n">ColReader</span><span class="p">(</span><span class="s2">&quot;en&quot;</span><span class="p">),</span> <span class="n">splitter</span><span class="o">=</span><span class="n">RandomSplitter</span><span class="p">())</span>
@@ -595,8 +591,7 @@ transformers: 4.16.2
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea ">
-<table border="1" class="dataframe">
+<div class="output_html rendered_html output_subarea "><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -657,8 +652,7 @@ transformers: 4.16.2
       <td></td>
     </tr>
   </tbody>
-</table>
-</div>
+</table></div>
 
 </div>
 
