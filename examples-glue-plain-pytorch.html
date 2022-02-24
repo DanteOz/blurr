@@ -605,7 +605,7 @@ transformers: 4.16.2
                 <span class="n">loss_func</span><span class="o">=</span><span class="n">PreCalculatedLoss</span><span class="p">(),</span>
                 <span class="n">metrics</span><span class="o">=</span><span class="n">task_metrics</span><span class="p">,</span>
                 <span class="n">cbs</span><span class="o">=</span><span class="p">[</span><span class="n">BaseModelCallback</span><span class="p">],</span>
-                <span class="n">splitter</span><span class="o">=</span><span class="n">hf_splitter</span><span class="p">)</span><span class="o">.</span><span class="n">to_fp16</span><span class="p">()</span>
+                <span class="n">splitter</span><span class="o">=</span><span class="n">blurr_splitter</span><span class="p">)</span><span class="o">.</span><span class="n">to_fp16</span><span class="p">()</span>
 
 <span class="n">learn</span><span class="o">.</span><span class="n">freeze</span><span class="p">()</span>
 </pre></div>
@@ -1426,7 +1426,7 @@ transformers: 4.16.2
                 <span class="n">loss_func</span><span class="o">=</span><span class="n">PreCalculatedLoss</span><span class="p">(),</span>
                 <span class="n">metrics</span><span class="o">=</span><span class="n">task_metrics</span><span class="p">,</span>
                 <span class="n">cbs</span><span class="o">=</span><span class="p">[</span><span class="n">BaseModelCallback</span><span class="p">],</span>
-                <span class="n">splitter</span><span class="o">=</span><span class="n">hf_splitter</span><span class="p">)</span><span class="o">.</span><span class="n">to_fp16</span><span class="p">()</span>
+                <span class="n">splitter</span><span class="o">=</span><span class="n">blurr_splitter</span><span class="p">)</span><span class="o">.</span><span class="n">to_fp16</span><span class="p">()</span>
 
 <span class="n">learn</span><span class="o">.</span><span class="n">freeze</span><span class="p">()</span>
 </pre></div>
